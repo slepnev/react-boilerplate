@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from './logo.svg';
+import logo from './assets/logo.svg';
 import './App.css';
 
 const App = () => {
@@ -21,6 +21,6 @@ const App = () => {
       </header>
     </div>
   );
-}
+};
 
 export default App;
