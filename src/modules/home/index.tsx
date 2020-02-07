@@ -2,16 +2,16 @@ import React from 'react';
 import Spinner from '../../shared/spinner/Spinner';
 
 
-const LoginBundle = React.lazy(() => import(
+const HomeBundle = React.lazy(() => import(
   /* webpackChunkName: 'login' */
   /* webpackPrefetch: 10 */
-  './Login'
+  './Home'
 ));
 
-const LoginModule = () => (
+const HomeModule = () => (
   <React.Suspense fallback={<Spinner/>}>
-    <LoginBundle />
+    <HomeBundle />
   </React.Suspense>
 );
 
-export default LoginModule;
+export default HomeModule;

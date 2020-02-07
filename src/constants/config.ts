@@ -1,5 +1,5 @@
-import { Env } from '../shared/enums/env.enum';
-import env from './env';
+import { Env } from '../types/enums/env.enum';
+import env from '../utils/env';
 
 const local = {
   ENV: Env.Local,

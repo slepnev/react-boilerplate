@@ -1,28 +1,33 @@
-import React, { Fragment } from 'react';
-import { Header, Logo, Menu } from './shared/components';
-import LoginModule from './modules/login';
+import React from 'react';
+import { Header, Logo, Menu } from './shared';
 import { Global } from '@emotion/core';
 import { globals, normalize } from './styles';
-import AppStyled from './app.style';
+import { AppStyled, AsideStyled, ContainerStyled, HeaderStyled, LogoWrapperStyled, MainStyled } from './app.styled';
+import { BrowserRouter } from 'react-router-dom';
+import Routes from './routes';
 
 const App = () => {
   return (
-    <Fragment>
-      <Global styles={normalize}/>
-      <Global styles={globals}/>
+    <BrowserRouter>
+      <Global styles={normalize} />
+      <Global styles={globals} />
       <AppStyled>
-        <header className="app__header">
-          <Logo />
-          <Header />
-        </header>
-        <div className="app__container">
+        <AsideStyled>
+          <LogoWrapperStyled>
+            <Logo />
+          </LogoWrapperStyled>
           <Menu />
-          <main>
-            <LoginModule />
-          </main>
-        </div>
+        </AsideStyled>
+        <ContainerStyled>
+          <HeaderStyled>
+            <Header />
+          </HeaderStyled>
+          <MainStyled>
+            <Routes />
+          </MainStyled>
+        </ContainerStyled>
       </AppStyled>
-    </Fragment>
+    </BrowserRouter>
   );
 };
 
