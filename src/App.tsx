@@ -11,7 +11,6 @@ const App = () => {
     <BrowserRouter>
       <Global styles={normalize} />
       <Global styles={globals} />
-
       <AppWrapper>
         <Aside>
           <LogoWrapper>
