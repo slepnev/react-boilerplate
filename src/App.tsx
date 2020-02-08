@@ -2,7 +2,7 @@ import React from 'react';
 import { Header, Logo, Menu } from './shared';
 import { Global } from '@emotion/core';
 import { globals, normalize } from './styles';
-import { AppStyled, AsideStyled, ContainerStyled, HeaderStyled, LogoWrapperStyled, MainStyled } from './app.styled';
+import { AppWrapper, Aside, Container, HeaderWrapper, LogoWrapper } from './app';
 import { BrowserRouter } from 'react-router-dom';
 import Routes from './routes';
 
@@ -11,22 +11,22 @@ const App = () => {
     <BrowserRouter>
       <Global styles={normalize} />
       <Global styles={globals} />
-      <AppStyled>
-        <AsideStyled>
-          <LogoWrapperStyled>
+      <AppWrapper>
+        <Aside>
+          <LogoWrapper>
             <Logo />
-          </LogoWrapperStyled>
+          </LogoWrapper>
           <Menu />
-        </AsideStyled>
-        <ContainerStyled>
-          <HeaderStyled>
+        </Aside>
+        <Container>
+          <HeaderWrapper>
             <Header />
-          </HeaderStyled>
-          <MainStyled>
+          </HeaderWrapper>
+          <main>
             <Routes />
-          </MainStyled>
-        </ContainerStyled>
-      </AppStyled>
+          </main>
+        </Container>
+      </AppWrapper>
     </BrowserRouter>
   );
 };
