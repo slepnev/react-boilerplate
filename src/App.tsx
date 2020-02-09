@@ -2,7 +2,7 @@ import React from 'react';
 import { Header, Logo, Menu } from './shared';
 import { Global } from '@emotion/core';
 import { globals, normalize } from './styles';
-import { AppWrapper, Aside, Container, HeaderWrapper, LogoWrapper } from './app';
+import { AppWrapper, Aside, Container, HeaderWrapper, LogoWrapper } from './app.styled';
 import { BrowserRouter } from 'react-router-dom';
 import Routes from './routes';
 

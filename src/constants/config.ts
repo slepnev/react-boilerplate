@@ -1,4 +1,4 @@
-import { Env } from '../types/enums/env.enum';
+import { Env } from '../types/enums/env';
 import env from '../utils/env';
 
 const local = {
